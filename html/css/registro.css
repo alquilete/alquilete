@@ -1,0 +1,200 @@
+header {
+
+  height: 250px;
+}
+
+
+/* logo */
+header div:nth-of-type(1) img {
+
+  height: 170px;
+  width: 170px;
+  float: left;
+  position: relative;
+  left: 90px;
+  top: 20px;
+}
+
+/* menu */
+
+header div:nth-of-type(2){
+
+  float: left;
+  position: relative;
+  left: 130px;
+  top: 80px;
+}
+
+header table, header table tr, header table tr td {
+
+  border: 1px solid grey;
+  border-collapse: separate;
+  border-spacing: 5px;
+
+}
+
+header div:nth-of-type(2) table tr td {
+
+  padding: 10px;
+  background-color: white;
+
+}
+
+header div:nth-of-type(2) table tr td img {
+
+  width: 80px;
+  height: 80px;
+  float: none;
+}
+
+/* login */
+header div:nth-of-type(3){
+
+  float: left;
+  position: relative;
+  left: 200px;
+  top: 40px;
+}
+
+header div:nth-of-type(3) input:nth-of-type(3) {
+
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+header div:nth-of-type(3) label {
+
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+header hr {
+
+  position: relative;
+  top: 220px;
+  width: 90%;
+  background-color: grey;
+}
+
+article {
+
+  margin-left: 180px
+
+}
+
+article h2 {
+
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+article p{
+
+    position: relative;
+    left: 330px;
+    bottom: 90px;
+    font-weight: bold;
+    padding: 10px 50px 10px 0;
+
+    background-image: url(../img/fl.png);
+    background-size: 90px 60px;
+    background-position: 160px -5px;
+    background-repeat: no-repeat;
+
+}
+
+
+article h3 {
+
+  margin-top: 50px;
+}
+article  h3,article input,article label{
+ position: relative;
+ bottom: 100px;
+}
+article label:nth-of-type(1){
+  margin-right: 50px;
+
+}
+article label:nth-of-type(2){
+  margin-right: 20px;
+
+}
+article label:nth-of-type(3){
+  margin-right: 13px;
+}
+article label:nth-of-type(4){
+  margin-right: 30px;
+}
+article label:nth-of-type(5){
+  margin-right: 18px;
+}
+article label:nth-of-type(6){
+  margin-right: 12px;
+}
+article label:nth-of-type(7){
+  margin-right: 10px;
+}
+article label:nth-of-type(8){
+  margin-right: 4px;
+}
+article input:nth-of-type(9){
+  position: relative;
+  left: 50px;
+}
+article input:nth-of-type(10) {
+  position: relative;
+  left: 200px;
+  border-radius: 10px;
+
+}
+
+footer {
+
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+footer hr {
+
+  position: relative;
+  width: 90%;
+  background-color: grey;
+  height: 1px;
+}
+
+footer div:nth-of-type(1){
+
+  float: left;
+  position: relative;
+  left: 100px;
+  width: 15%;
+  margin-top: 15px;
+}
+
+footer div:nth-of-type(1) li {
+
+  font-size: 20px;
+
+}
+
+footer div:nth-of-type(2){
+
+  float: left;
+  position: relative;
+  left: 450px;
+  width: 40%;
+}
+
+footer div:nth-of-type(2) label {
+
+  font-weight: bold;
+}
+
+footer div:nth-of-type(2) input:nth-of-type(2) {
+
+  margin-top: 10px;
+}
