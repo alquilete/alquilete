@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-  <div>
-    <header>
-      <img src="img/logo.jpg" alt="LOGO"/>
-      <div>
+  <div class="contenedor">
+    <header class="fila">
+      <div class="col-4"><img src="img/logo.jpg" alt="LOGO"/></div>
+      <div class="col-3">
         <h1> Alquilete </h1>
         <h3> Alquila tu patinete </h3>
       </div>
-      <div>
+      <div class="col-1"></div>
+      <div class="col-3">
         <label for="usu"> Usuario </label> </br>
         <input type="text" name="usu" value=""/>
         </br>
@@ -28,32 +29,36 @@
         <input type="submit" value="Entrar"/></br>
         <p> <a href="src/registro.html">¿No estás registrado?</a></p>
       </div>
-      <hr/>
+      <div class="col-1"></div>
     </header>
-    <section>
-      <ul>
-        <li> <a href="#">¿Como Funciona?</a></li>
-        <li> <a >Productos</a></li>
+    <div class="fila" id="arriba">
+      <div class="col-12"><hr/></div>
+    </div>
+    <section class="fila">
+      <ul class="col-6">
+        <li> <a href="src/como_funciona.html">¿Como Funciona?</a></li>
       </ul>
-      <img src="img/BICI.jpg" alt="">
+      <div class="col-6"><img src="img/BICI.jpg" alt=""></div>
     </section>
-    <section>
+    <section class="fila">
       <ul>
-        <li><img src="img/patinete.png" alt=""></li>
-        <li><img src="img/bici.png" alt=""></li>
-        <li><img src="img/bicipati.png" alt=""></li>
+        <li class="col-4"><a href="src/patinetes.html"><img src="img/patinete.png" alt=""></a></li>
+        <li class="col-4"><a href="src/bicicletas.html"><img src="img/bici.png" alt=""></a></li>
+        <li class="col-4"><a href="src/bicipatinetes.html"><img src="img/bicipati.png" alt=""></a></li>
       </ul>
     </section>
-    <section>
-      <img src="img/patin.jpg" alt="">
-      <ul>
-        <li> <a href="#">¿Quienes Somos?</a></li>
+    <section class="fila">
+      <div class="col-6"><img src="img/patin.jpg" alt=""></div>
+      <div class="col-1"></div>
+      <ul class="col-4">
+        <li cl> <a href="src/sobre_nosotros.html">¿Quienes Somos?</a></li>
         <li><div>
           <label for="sus"> Suscríbete </label> </br>
           <input type="text" name="sus" value=""/></br>
           <input type="submit" value="Enviar"/>
         </div></li>
       </ul>
+      <div class="col-1"></div>
     </section>
   </div>
   </body>

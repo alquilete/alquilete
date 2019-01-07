@@ -10,31 +10,36 @@
     <link rel="stylesheet" href="../css/bootstrap-reboot.css">
     <link rel="stylesheet" href="../css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="../css/sobre_nosotros.css">
+    <link rel="stylesheet" href="../css/general.css">
   </head>
   <body>
-    <div>
-      <header>
-        <div>
-          <a href="../index.html"/><img src="../img/logo.jpg" alt="LOGO"/></a>
+    <div class="contenedor">
+      <header class="fila">
+        <div class="col-4">
+          <a href="../index.html"/><a href="../index.html"/><img src="../img/logo.jpg" alt="LOGO"/></a></a>
         </div>
-        <div>
+        <div class="col-4">
           <table>
             <tr>
-              <td><a href="#patinetes"><img src="../img/patinete.png" alt="Patinetes"/></a></td>
-              <td><a href="#bicis"><img src="../img/bici.png" alt="Bicicletas"/></a></td>
-              <td><a href="#ambos"><img src="../img/bicipati.png" alt="Ambos"/></a></td>
+              <td><a href="patinetes.html"><img src="../img/patinete.png" alt="Patinetes"/></a></td>
+              <td><a href="bicicletas.html"><img src="../img/bici.png" alt="Bicicletas"/></a></td>
+              <td><a href="ambos.html"><img src="../img/bicipati.png" alt="Ambos"/></a></td>
             </tr>
           </table>
         </div>
-        <div>
-          <figure>
+        <div class="col-4">
+          <a href="info_cuenta.html"><figure>
           <img src="../img/usuario.png" alt="">
           <figcaption>Usuario Admin</figcaption>
-          </figure>
+          </figure></a>
         </div>
-        <hr/>
       </header>
-      <article>
+      <div class="fila" id="arriba">
+        <div class="col-12"><hr/></div>
+      </div>
+      <div class="fila">
+        <div class="col-1"></div>
+        <article class="col-10">
         <h2>Sobre nosotros</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -52,22 +57,33 @@
               reprehenderit, dignissimos qui doloremque, ipsa assumenda
               ratione. Magni, voluptatum nostrum tempore praesentium quas
               natus sint.</p>
-              <img src="../img/ofi.jpg" alt="">
-              <img src="../img/ofi2.jpg" alt="">
+              <div class="fila" id="imgs">
+                <div class="col-4"><img src="../img/ofi.jpg" alt=""></div>
+                <div class="col-2"></div>
+                <div class="col-4"><img src="../img/ofi2.jpg" alt=""></div>
+                <div class="col-2"></div>
+              </div>
       </article>
-      <footer>
-      <hr>
-        <div>
+        <div class="col-1"></div>
+      </div>
+      <div class="fila">
+        <div class="col-12" id="abajo"><hr class="hr" /></div>
+      </div>
+      <footer class="fila">
+        <div class="col-1"></div>
+        <div class="col-3">
           <ul>
-            <li><a href="#comofunciona">Cómo Funciona</a></li>
-            <li><a href="#sobrenosotros">Sobre Nosotros</a></li>
+            <li><a href="como_funciona.html">Cómo Funciona</a></li>
+            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
           </ul>
         </div>
-        <div>
+        <div class="col-4"></div>
+        <div class="col-3">
           <label for="sus"> Suscríbete </label> </br>
           <input type="text" name="sus" /></br>
           <input type="submit" name="enviar" value="Enviar"/>
         </div>
+        <div class="col-1"></div>
       </footer>
     </div>
   </body>

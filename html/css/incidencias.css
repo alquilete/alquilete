@@ -1,28 +1,27 @@
 header {
 
-  height: 250px;
+  margin-top: 50px;
+  font-size: 1.6em;
 }
 
-
 /* logo */
+
+header div:nth-of-type(1){
+
+  text-align: center;
+}
+
 header div:nth-of-type(1) img {
 
-  height: 170px;
-  width: 170px;
-  float: left;
-  position: relative;
-  left: 90px;
-  top: 20px;
+  width: 60%;
+
 }
 
 /* menu */
 
 header div:nth-of-type(2){
 
-  float: left;
-  position: relative;
-  left: 260px;
-  top: 80px;
+  text-align: center;
 }
 
 header table, header table tr, header table tr td {
@@ -43,125 +42,65 @@ header div:nth-of-type(2) table tr td {
 header div:nth-of-type(2) table tr td img {
 
   width: 80px;
-  height: 80px;
-  float: none;
+
 }
 
 
 
 /* user */
 
-header div:nth-of-type(3) {
+header div:nth-of-type(3){
 
-    position: relative;
-    float: left;
-    left: 450px;
-    top: 20px;
+  text-align: center;
 }
 
 header div:nth-of-type(3) img {
 
-  height: 130px;
-  width: 130px;
+  width: 50%;
 
 }
 
-header div:nth-of-type(3) > figure > figcaption {
+hr {
 
-  position: relative;
-  left: 10px;
-  top: 20px;
+  height: 2px;
+  background-color: transparent;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-
-header hr {
-
-  position: relative;
-  top: 220px;
-  width: 90%;
-  background-color: grey;
-}
-
+/* article */
 
 article {
 
-  margin-left: 180px;
-  height: 500px;
-
+  font-size: 1.6em;
 }
+
 
 article h2 {
 
-  font-size: 2.2em;
+  font-size: 2.7em;
   font-weight: bold;
-  margin-bottom: 50px;
-}
-
-
-article label:nth-of-type(1){
-  margin-right: 20px;
 
 }
-article label:nth-of-type(2){
-  margin-right: 67px;
+
+article h3 {
+
+  font-size: 1.8em;
+  font-weight: bold;
 
 }
-article label:nth-of-type(3){
-  margin-right: 65px;
-  position: relative;
-  top: -103px;
-}
 
-article textarea {
+article ul li{
+  list-style-type: decimal;
 
-  height: 120px;
-  width: 184px;
 }
 
 footer {
 
-  float: left;
-  position: relative;
-  width: 100%;
-  margin-bottom: 15px;
+  font-size: 1.6em;
 }
 
-footer hr {
+.hr {
 
-  position: relative;
-  width: 90%;
-  background-color: grey;
-}
-
-footer div:nth-of-type(1){
-
-  float: left;
-  position: relative;
-  left: 100px;
-  width: 20%;
-  margin-top: 15px;
-}
-
-footer div:nth-of-type(1) li {
-
-  font-size: 20px;
-
-}
-
-footer div:nth-of-type(2){
-
-  float: left;
-  position: relative;
-  left: 450px;
-  width: 40%;
-}
-
-footer div:nth-of-type(2) label {
-
-  font-weight: bold;
-}
-
-footer div:nth-of-type(2) input:nth-of-type(2) {
-
-  margin-top: 10px;
+  margin-top: 630px;
 }
