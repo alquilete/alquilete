@@ -1,7 +1,6 @@
 
 header {
 
-  margin-top: 50px;
   font-size: 1.6em;
 }
 
@@ -17,6 +16,8 @@ header div:nth-of-type(1) img {
   width: 60%;
 
 }
+
+
 
 /* menu */
 
@@ -55,19 +56,17 @@ header div:nth-of-type(3){
   text-align: center;
 }
 
+header div:nth-of-type(3) figure {
+
+  margin: 0;
+}
+
 header div:nth-of-type(3) img {
 
   width: 50%;
 
 }
 
-hr {
-
-  height: 2px;
-  background-color: transparent;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
 
 
 /* article */

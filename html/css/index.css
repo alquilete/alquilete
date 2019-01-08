@@ -1,10 +1,13 @@
-/* HEADER */
+
+header {
+
+  padding: 30px 0;
+}
 
 /* logo */
 body header > div > img {
 
-  height: 200px;
-  margin: 40px, 60px;
+  width: 200px;
 }
 
 /* titulo */
@@ -15,13 +18,15 @@ header div:nth-of-type(2) {
 
 header div:nth-of-type(2) h1 {
 
-  font-size: 50px;
+  font-size: 4em;
+  margin: 0;
   font-weight: bolder;
 }
 
 header div:nth-of-type(2) h3 {
 
-  font-size: 20px;
+  font-size: 1.6em;
+  margin: 20px 0;
 }
 
 
@@ -40,7 +45,19 @@ header div:nth-of-type(4) input:nth-of-type(3) {
 header div:nth-of-type(4) label {
 
   font-weight: bold;
-  margin-bottom: 5px;
+  padding: 10px 0px;
+  font-size: 1.5em;
+}
+
+header div:nth-of-type(4) a {
+
+  font-size: 1.5em;
+}
+
+header div:nth-of-type(4) input {
+
+  font-size: 1.3em;
+  margin: 5px 0;
 }
 
 
@@ -72,15 +89,15 @@ body section:nth-of-type(1) > ul {
 body section:nth-of-type(1) > ul > li > a {
 
   font-size: 2em;
-  background: grey;
-  color: white;
+  background: teal;
+  color: aquamarine;
   padding: 10px;
   border-radius: 20px;
 }
 
 body section:nth-of-type(1) > div > img {
 
-  background-color: grey;
+  background-color: teal;
   width: 250px;
 
 }
@@ -107,7 +124,7 @@ body section:nth-of-type(2) img {
 
   width: 120px;
   height: 120px;
-  background-color: lightgrey;
+  background-color: turquoise;
   border-radius: 20px;
   padding: 15px;
 
@@ -127,15 +144,15 @@ body section:nth-of-type(3) > ul > li {
 body section:nth-of-type(3) > ul > li > a {
 
   font-size: 2em;
-  background: grey;
-  color: white;
+  background: teal;
+  color: aquamarine;
   padding: 10px;
   border-radius: 20px;
 }
 
 body section:nth-of-type(3) > ul > li > div {
 
-  background-color: lightgrey;
+  background-color: turquoise;
   border-radius: 20px;
   padding: 15px;
   text-align: center;
@@ -151,8 +168,8 @@ body section:nth-of-type(3) > ul > li > div input {
 
 body section:nth-of-type(3) > ul > li > div input:nth-of-type(2) {
 
-  background-color: grey;
-  color: white;
+  background-color: teal;
+  color: aquamarine;
 }
 
 body section:nth-of-type(3) > ul > li > div label {
@@ -164,6 +181,6 @@ body section:nth-of-type(3) > ul > li > div label {
 
 body section:nth-of-type(3) > div > img {
 
-  background-color: grey;
+  background-color: teal;
   width: 250px;
 }

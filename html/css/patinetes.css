@@ -1,7 +1,6 @@
 
 header {
 
-  margin-top: 50px;
   font-size: 1.6em;
 }
 
@@ -10,6 +9,11 @@ header {
 header div:nth-of-type(1){
 
   text-align: center;
+}
+
+header div:nth-of-type(3) figure {
+
+  margin: 0;
 }
 
 header div:nth-of-type(1) img {

@@ -1,8 +1,25 @@
 /* BOOTSTRAP */
+html {
+
+  background-color: teal;
+  color: teal;
+}
+
+body {
+
+  margin: 0px;
+}
 
 .contenedor {
 
+  width: 100%;
   background-color: aquamarine;
+  margin: 0;
+}
+
+.contenedor a {
+
+  text-decoration: none;
 }
 
 .contenedor * {
@@ -38,47 +55,91 @@
       .col-11 { width: 91.6666%; }
       .col-12 { width: 100%; }
 
+
 /* header */
 
 header {
 
-  background-color: turquoise;
+  padding: 20px 0;
+  background-color: teal;
+  color: aquamarine;
 }
+
+header div label {
+
+  margin: 10px 0px;
+}
+
+header a, footer a {
+
+  color: aquamarine;
+}
+
+header tbody {
+
+  background-color: aquamarine;
+}
+
+
+/* hr */
 
 #arriba {
 
   background-color: turquoise;
-  background-image: linear-gradient(turquoise, aquamarine);
+  background-image: linear-gradient(teal, aquamarine);
+  height: 100px;
 }
 
 #abajo {
 
   background-color: turquoise;
-  background-image: linear-gradient(aquamarine, turquoise);
+  background-image: linear-gradient(aquamarine, teal);
+  height: 100px;
 }
+
+/* diseño */
+
+input {
+
+  padding: 7px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+
 /* FOOTER */
 
 footer {
 
+  padding-top: 30px;
   text-align: center;
-  background-color: turquoise;
+  background-color: teal;
+  color: aquamarine;
+  padding-bottom: 30px;
 }
 
 
-footer div:nth-of-type(1) li {
+footer li {
 
-  font-size: 20px;
+  font-size: 1.4em;
+  list-style: none;
+  padding-bottom: 40px;
+  font-weight: bolder;
 
 }
 
+footer input, footer label {
 
-footer div:nth-of-type(2) label {
+  font-size: 1.2em;
+}
+
+
+footer label {
 
   font-weight: bold;
 }
 
-footer div:nth-of-type(2) input:nth-of-type(2) {
+footer input {
 
   margin-top: 10px;
 }
-

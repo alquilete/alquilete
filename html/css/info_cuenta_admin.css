@@ -1,7 +1,6 @@
 
 header {
 
-  margin-top: 50px;
   font-size: 1.6em;
 }
 
@@ -55,10 +54,15 @@ header div:nth-of-type(3){
   text-align: center;
 }
 
-header div:nth-of-type(3) img {
+header div:nth-of-type(3) img{
 
   width: 50%;
 
+}
+
+header div:nth-of-type(3) figcaption {
+
+  width: 100pxM
 }
 
 hr {
