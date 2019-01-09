@@ -39,7 +39,6 @@ header table, header table tr, header table tr td {
 header div:nth-of-type(2) table tr td {
 
   padding: 10px;
-  background-color: white;
 
 }
 
@@ -99,12 +98,22 @@ article ul li{
 
 }
 
+article input, article select, article textarea {
+
+  font-size: 1.1em;
+}
+
+article textarea {
+
+  height: 150px;
+}
+
+article select option {
+
+  font-size: 0.4em;
+}
+
 footer {
 
   font-size: 1.6em;
-}
-
-.hr {
-
-  margin-top: 630px;
 }
