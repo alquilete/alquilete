@@ -41,7 +41,7 @@ header div:nth-of-type(3) figure {
 
 article {
 
-  font-size: 1.2em;
+  font-size: 1em;
   padding-bottom: 50px;
 }
 
@@ -54,14 +54,18 @@ article h2 {
 
 }
 
-article h3 {
+article th {
 
-  font-size: 1.4em;
-  font-weight: bold;
-  margin: 0;
+  border-bottom: solid teal 2px;
 }
 
-article ul li{
-  list-style-type: decimal;
+article td {
+
+  border-bottom: solid teal 1px;
+}
+
+article th, article td {
+
+  text-align: left;
 
 }

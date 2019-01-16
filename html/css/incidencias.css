@@ -1,6 +1,5 @@
 header {
 
-  margin-top: 50px;
   font-size: 1.6em;
 }
 
@@ -9,6 +8,11 @@ header {
 header div:nth-of-type(1){
 
   text-align: center;
+}
+
+header div:nth-of-type(3) figure {
+
+  margin: 0;
 }
 
 header div:nth-of-type(1) img {
@@ -35,7 +39,6 @@ header table, header table tr, header table tr td {
 header div:nth-of-type(2) table tr td {
 
   padding: 10px;
-  background-color: white;
 
 }
 
@@ -95,12 +98,22 @@ article ul li{
 
 }
 
+article input, article select, article textarea {
+
+  font-size: 1.1em;
+}
+
+article textarea {
+
+  height: 150px;
+}
+
+article select option {
+
+  font-size: 0.4em;
+}
+
 footer {
 
   font-size: 1.6em;
-}
-
-.hr {
-
-  margin-top: 630px;
 }

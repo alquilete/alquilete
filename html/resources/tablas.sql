@@ -17,6 +17,7 @@ CREATE TABLE usuario (
     dni VARCHAR(9) NOT NULL,
     nombre VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL,
+    contrasena VARCHAR(100) NOT NULL,
     direccion VARCHAR(50) NOT NULL,
     telefono INT(9) NOT NULL,
     datos_bancarios VARCHAR(100) NOT NULL,
@@ -40,12 +41,6 @@ CREATE TABLE ubicacion (
     PRIMARY KEY (coordenadas)
 );
 
-CREATE TABLE suelta (
-    coordenadas VARCHAR(50) NOT NULL,
-    PRIMARY KEY (coordenadas),
-    FOREIGN KEY (coordenadas) REFERENCES ubicacion(coordenadas)  on DELETE CASCADE
-);
-
 CREATE TABLE estacion (
     coordenadas VARCHAR(50) NOT NULL,
     PRIMARY KEY (coordenadas),
@@ -66,53 +61,36 @@ CREATE TABLE producto (
     cod_producto MEDIUMINT NOT NULL AUTO_INCREMENT,
     coordenadas VARCHAR(50) NOT NULL,
     cif VARCHAR(9) NOT NULL,
+    tipo VARCHAR(15) NOT NULL,
     color VARCHAR(10) NOT NULL,
-    PRIMARY KEY (cod_producto, coordenadas),
+    bateria VARCHAR(10),
+    PRIMARY KEY (cod_producto),
     FOREIGN KEY (coordenadas) REFERENCES ubicacion(coordenadas) on DELETE CASCADE,
     FOREIGN KEY (cif) REFERENCES proveedor(cif) on DELETE CASCADE
-);
-
-
-CREATE TABLE bicicleta (
-    cod_producto MEDIUMINT NOT NULL,
-    coordenadas VARCHAR(50) NOT NULL,
-    PRIMARY KEY (cod_producto, coordenadas),
-    FOREIGN KEY (cod_producto, coordenadas) REFERENCES producto(cod_producto, coordenadas) on DELETE CASCADE
-);
-
-CREATE TABLE patinete (
-    cod_producto MEDIUMINT NOT NULL,
-    coordenadas VARCHAR(50) NOT NULL,
-    bateria VARCHAR(50) NOT NULL,
-    PRIMARY KEY (cod_producto, coordenadas),
-    FOREIGN KEY (cod_producto, coordenadas) REFERENCES producto(cod_producto, coordenadas) on DELETE CASCADE
 );
 
 CREATE TABLE factura (
     cod_factura MEDIUMINT NOT NULL AUTO_INCREMENT,
     cod_usuario MEDIUMINT NOT NULL,
     cod_producto MEDIUMINT NOT NULL,
-    coordenadas VARCHAR(50) NOT NULL,
     fecha DATE NOT NULL,
     cantidad MEDIUMINT NOT NULL,
-    tipo VARCHAR(10) NOT NULL,
     descripcion VARCHAR(50) NOT NULL,
     precio MEDIUMINT NOT NULL,
     PRIMARY KEY (cod_factura),
     FOREIGN KEY (cod_usuario) REFERENCES usuario(cod_usuario) on DELETE CASCADE,
-    FOREIGN KEY (cod_producto, coordenadas) REFERENCES producto(cod_producto, coordenadas) on DELETE CASCADE
+    FOREIGN KEY (cod_producto) REFERENCES producto(cod_producto) on DELETE CASCADE
 );
 
 CREATE TABLE pago (
     cod_usuario MEDIUMINT NOT NULL,
     cod_producto MEDIUMINT NOT NULL,
-    coordenadas VARCHAR(50) NOT NULL,
     cod_factura MEDIUMINT NOT NULL,
     f_ini DATE NOT NULL,
     f_fin DATE NOT NULL,
-    PRIMARY KEY (cod_usuario, cod_producto, coordenadas, cod_factura),
+    PRIMARY KEY (cod_usuario, cod_producto, cod_factura),
     FOREIGN KEY (cod_usuario) REFERENCES usuario(cod_usuario) on DELETE CASCADE,
-    FOREIGN KEY (cod_producto, coordenadas) REFERENCES producto(cod_producto, coordenadas) on DELETE CASCADE,
+    FOREIGN KEY (cod_producto) REFERENCES producto(cod_producto) on DELETE CASCADE,
     FOREIGN KEY (cod_factura) REFERENCES factura(cod_factura) on DELETE CASCADE
 );
 
@@ -126,17 +104,17 @@ CREATE TABLE incidencia (
 );
 
 
-INSERT INTO usuario (cod_usuario, dni, nombre, email, direccion, telefono, datos_bancarios) VALUES
-    (1, '11111111A','Jose García Pérez', 'jose@gmail.com','C/ pez 25', 611111111,'ES11 1111 1111 1111 1111 1111'),
-    (2, '22222222B','María López López', 'maria@gmail.com','C/ sol 2', 622222222,'ES22 2222 2222 2222 2222 2222'),
-    (3, '33333333C','Cristian Rubio Pérez', 'cristian@gmail.com','C/ luna 3', 633333333,'ES33 3333 3333 3333 3333 3333'),
-    (4, '44444444D','Dolores Gómez López', 'dolores@gmail.com','C/ leo 4', 644444444,'ES44 4444 4444 4444 4444 4444'),
-    (5, '55555555E','Álvaro Gómez Pérez', 'alvaro@gmail.com','C/ princesa 5', 655555555,'ES55 5555 5555 5555 5555 5555'),
-    (6, '66666666F','Pablo Abarca López', 'pablo@gmail.com','C/ caoba 6', 666666666,'ES66 6666 6666 6666 6666 6666'),
-    (7, '77777777G','Cristina Rubio Garcia', 'caristina@gmail.com','C/ villablanca 7', 677777777,'ES77 7777 7777 7777 7777 7777'),
-    (8, '88888888H','Pedro García García ', 'pedro@gmail.com','C/ sol 8', 688888888,'ES88 8888 8888 8888 8888 8888'),
-    (9, '99999999I','Sergio Valle Garcia', 'sergio@gmail.com','C/ legazpi 9', 699999999,'ES99 9999 9999 9999 9999 9999'),
-    (10, '10101010J','Clara Ávila Gómez ', 'clara@gmail.com','C/ gran via 10', 610101010,'ES10 1010 1010 1010 1010 1010');
+INSERT INTO usuario (cod_usuario, dni, nombre, email, contrasena, direccion, telefono, datos_bancarios) VALUES
+    (1, '11111111A','Jose García Pérez', 'jose@gmail.com', '$2y$10$pMLaxBP9yyWfevfn/5/fWOpRx09AZ/fY70KpWvmTLfGADrEl5fmTO', 'C/ pez 25', 611111111,'ES11 1111 1111 1111 1111 1111'),
+    (2, '22222222B','María López López', 'maria@gmail.com', '$2y$10$pMLaxBP9yyWfevfn/5/fWOpRx09AZ/fY70KpWvmTLfGADrEl5fmTO', 'C/ sol 2', 622222222,'ES22 2222 2222 2222 2222 2222'),
+    (3, '33333333C','Cristian Rubio Pérez', 'cristian@gmail.com', '$2y$10$pMLaxBP9yyWfevfn/5/fWOpRx09AZ/fY70KpWvmTLfGADrEl5fmTO', 'C/ luna 3', 633333333,'ES33 3333 3333 3333 3333 3333'),
+    (4, '44444444D','Dolores Gómez López', 'dolores@gmail.com', '$2y$10$pMLaxBP9yyWfevfn/5/fWOpRx09AZ/fY70KpWvmTLfGADrEl5fmTO', 'C/ leo 4', 644444444,'ES44 4444 4444 4444 4444 4444'),
+    (5, '55555555E','Álvaro Gómez Pérez', 'alvaro@gmail.com', '$2y$10$pMLaxBP9yyWfevfn/5/fWOpRx09AZ/fY70KpWvmTLfGADrEl5fmTO', 'C/ princesa 5', 655555555,'ES55 5555 5555 5555 5555 5555'),
+    (6, '66666666F','Pablo Abarca López', 'pablo@gmail.com', '$2y$10$pMLaxBP9yyWfevfn/5/fWOpRx09AZ/fY70KpWvmTLfGADrEl5fmTO', 'C/ caoba 6', 666666666,'ES66 6666 6666 6666 6666 6666'),
+    (7, '77777777G','Cristina Rubio Garcia', 'caristina@gmail.com', '$2y$10$pMLaxBP9yyWfevfn/5/fWOpRx09AZ/fY70KpWvmTLfGADrEl5fmTO', 'C/ villablanca 7', 677777777,'ES77 7777 7777 7777 7777 7777'),
+    (8, '88888888H','Pedro García García ', 'pedro@gmail.com', '$2y$10$pMLaxBP9yyWfevfn/5/fWOpRx09AZ/fY70KpWvmTLfGADrEl5fmTO', 'C/ sol 8', 688888888,'ES88 8888 8888 8888 8888 8888'),
+    (9, '99999999I','Sergio Valle Garcia', 'sergio@gmail.com', '$2y$10$pMLaxBP9yyWfevfn/5/fWOpRx09AZ/fY70KpWvmTLfGADrEl5fmTO', 'C/ legazpi 9', 699999999,'ES99 9999 9999 9999 9999 9999'),
+    (10, '10101010J','Clara Ávila Gómez ', 'clara@gmail.com', '$2y$10$pMLaxBP9yyWfevfn/5/fWOpRx09AZ/fY70KpWvmTLfGADrEl5fmTO', 'C/ gran via 10', 610101010,'ES10 1010 1010 1010 1010 1010');
 
 INSERT INTO premium (cod_usuario, cuota, descuento) VALUES
     (1, 20, 5),
@@ -155,20 +133,11 @@ INSERT INTO ubicacion (coordenadas, cp, localidad, municipio) VALUES
     ('40.418310, -3.697936', 28014, 'Madrid','Madrid'),
     ('40.429675, -3.686838', 28001, 'Madrid','Madrid');
 
-INSERT INTO suelta (coordenadas) VALUES
-    ('40.402516, -3.641120'),
-    ('40.406333, -3.687845'),
-    ('40.382964, -3.706469'),
-    ('40.432896, -3.729289'),
-    ('40.448626, -3.720824'),
-    ('40.411494, -3.669599');
-
-
 INSERT INTO estacion (coordenadas) VALUES
     ('40.387561, -3.645011'),
     ('40.393666, -3.694656'),
     ('40.418310, -3.697936'),
-    ('40.429675, -3.686838');                  
+    ('40.429675, -3.686838');
 
 INSERT INTO proveedor (cif , nombre, direccion, telefono, detalles) VALUES
     ('A66666666','Patin S.A', 'c/ serrano, 5', 666666661,''),
@@ -177,58 +146,43 @@ INSERT INTO proveedor (cif , nombre, direccion, telefono, detalles) VALUES
     ('D99999999','Alquilar S.A','C/ legazpi 9', 699999994,''),
     ('E10101010','Patinetes S.B','C/ gran via 10', 610101015,'');
 
-INSERT INTO producto (cod_producto, coordenadas, cif, color) VALUES
-    (1, '40.402516, -3.641120', 'A66666666', 'azul'),
-    (2, '40.406333, -3.687845', 'B77777777', 'azul'),
-    (3, '40.382964, -3.706469', 'C88888888', 'azul'),
-    (4, '40.432896, -3.729289', 'D99999999', 'azul'),
-    (5, '40.448626, -3.720824', 'E10101010', 'verde'),
-    (6, '40.411494, -3.669599', 'B77777777', 'verde'),
-    (7, '40.387561, -3.645011', 'E10101010', 'verde'),
-    (8, '40.393666, -3.694656', 'B77777777', 'verde'),
-    (9, '40.418310, -3.697936', 'D99999999', 'rojo'),
-    (10, '40.429675, -3.686838', 'C88888888', 'rojo');
+INSERT INTO producto (cod_producto, coordenadas, cif, tipo, color, bateria) VALUES
+    (1, '40.402516, -3.641120', 'A66666666', 'patinete', 'azul', 'verde'),
+    (2, '40.406333, -3.687845', 'B77777777', 'bicicleta', 'azul', NULL),
+    (3, '40.382964, -3.706469', 'C88888888', 'patinete', 'azul', 'verde'),
+    (4, '40.432896, -3.729289', 'D99999999', 'bicicleta', 'azul', NULL),
+    (5, '40.448626, -3.720824', 'E10101010', 'patinete', 'verde', 'verde'),
+    (6, '40.411494, -3.669599', 'B77777777', 'bicicleta', 'verde', NULL),
+    (7, '40.387561, -3.645011', 'E10101010', 'patinete', 'verde', 'naranja'),
+    (8, '40.393666, -3.694656', 'B77777777', 'bicicleta', 'verde', NULL),
+    (9, '40.418310, -3.697936', 'D99999999', 'bicicleta', 'rojo', NULL),
+    (10, '40.429675, -3.686838', 'C88888888', 'patinete', 'rojo', 'verde');
 
-INSERT INTO bicicleta (cod_producto, coordenadas) VALUES
-    (2, '40.406333, -3.687845'),
-    (4, '40.432896, -3.729289'),
-    (8, '40.393666, -3.694656'),
-    (9, '40.418310, -3.697936'),
-    (6, '40.411494, -3.669599');
+INSERT INTO factura (cod_factura, cod_usuario, cod_producto, fecha, cantidad, descripcion, precio) VALUES
+    (1, 2 , 1, '2018-02-01', 1, 'Pago Alquilete', 10),
+    (2, 5, 2, '2018-03-21', 1, 'Pago Alquilete', 10),
+    (3, 3, 3,'2018-04-15', 1, 'Pago Alquilete', 15),
+    (4, 1, 4, '2018-04-10', 1, 'Pago Alquilete', 15),
+    (5, 10, 5, '2018-04-10', 1, 'Pago Alquilete', 10),
+    (6, 8, 6, '2018-05-11', 1, 'Pago Alquilete', 15),
+    (7, 9, 7, '2018-05-04', 1, 'Pago Alquilete', 15),
+    (8, 7, 8, '2018-06-01', 1, 'Pago Alquilete', 10),
+    (9, 6, 9, '2018-06-11', 1, 'Pago Alquilete', 15),
+    (10, 4, 10, '2018-07-12', 1, 'Pago Alquilete', 15);
 
-INSERT INTO patinete (cod_producto, coordenadas, bateria) VALUES
-    (1, '40.402516, -3.641120','B-111'),
-    (3, '40.382964, -3.706469','C-123'),
-    (5, '40.448626, -3.720824','D-456'),
-    (7, '40.387561, -3.645011','E-789'),
-    (10, '40.429675, -3.686838','F-321');
-
-INSERT INTO factura (cod_factura, cod_usuario, cod_producto, coordenadas, fecha, cantidad, tipo, descripcion, precio) VALUES 
-    (1, 2 , 1,'40.402516, -3.641120', '2018-02-01', 1, 'bici', 'Bicileta', 10),
-    (2, 5, 2, '40.406333, -3.687845', '2018-03-21', 1, 'patin', 'Patinete', 10),
-    (3, 3, 3, '40.382964, -3.706469','2018-04-15', 1, 'bici', 'Bicileta', 15),
-    (4, 1, 4, '40.432896, -3.729289', '2018-04-10', 1, 'patin', 'Patinete', 15),
-    (5, 10, 5, '40.448626, -3.720824', '2018-04-10', 1, 'bici', 'Bicileta', 10),
-    (6, 8, 6, '40.411494, -3.669599', '2018-05-11', 1, 'patin', 'Patinete', 15),
-    (7, 9, 7, '40.387561, -3.645011', '2018-05-04', 1, 'patin', 'Patinete', 15),
-    (8, 7, 8, '40.393666, -3.694656', '2018-06-01', 1, 'bici', 'Bicileta', 10),
-    (9, 6, 9, '40.418310, -3.697936', '2018-06-11', 1, 'patin', 'Patinete', 15),
-    (10, 4, 10, '40.429675, -3.686838', '2018-07-12', 1, 'bici', 'Bicileta', 15);
-
-INSERT INTO pago (cod_usuario, cod_producto, coordenadas, cod_factura, f_ini, f_fin) VALUES
-    (1, 1,'40.402516, -3.641120', 1, '2018-02-01', '2018-02-02'),
-    (1, 2, '40.406333, -3.687845', 2, '2018-03-08', '2018-03-09'),
-    (2, 3, '40.382964, -3.706469', 3, '2018-03-07', '2018-04-07'),
-    (3, 4, '40.432896, -3.729289', 4, '2018-04-11', '2018-04-11'),
-    (5, 5, '40.448626, -3.720824', 5, '2018-04-14', '2018-04-14'),
-    (6, 6, '40.411494, -3.669599', 6, '2018-05-18', '2018-05-18'),
-    (6, 7, '40.387561, -3.645011', 7, '2018-06-20', '2018-06-22'),
-    (6, 8, '40.393666, -3.694656', 8, '2018-06-28', '2018-06-29'),
-    (9, 9, '40.418310, -3.697936', 9, '2018-06-30', '2018-07-01'),
-    (10, 10, '40.429675, -3.686838', 10, '2018-07-15', '2018-07-16');
+INSERT INTO pago (cod_usuario, cod_producto, cod_factura, f_ini, f_fin) VALUES
+    (1, 1, 1, '2018-02-01', '2018-02-02'),
+    (1, 2, 2, '2018-03-08', '2018-03-09'),
+    (2, 3, 3, '2018-03-07', '2018-04-07'),
+    (3, 4, 4, '2018-04-11', '2018-04-11'),
+    (5, 5, 5, '2018-04-14', '2018-04-14'),
+    (6, 6, 6, '2018-05-18', '2018-05-18'),
+    (6, 7, 7, '2018-06-20', '2018-06-22'),
+    (6, 8, 8, '2018-06-28', '2018-06-29'),
+    (9, 9, 9, '2018-06-30', '2018-07-01'),
+    (10, 10, 10, '2018-07-15', '2018-07-16');
 
 INSERT INTO incidencia (cod_incidencia, cod_producto, motivo,detalles) VALUES
     (1, 5,' Rueda', 'Pinchazo de una rueda'),
     (2, 9, 'Bateria', 'Se rompió la batería'),
     (3, 2, 'Ruedas', 'Pinchazo de las ruedas');
-   

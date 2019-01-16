@@ -1,24 +1,18 @@
 <html>
   <head>
     <title>Registro</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/bootstrap-grid.css">
-    <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="../css/bootstrap-reboot.min.css">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="../css/registro.css">
     <link rel="stylesheet" href="../css/general.css">
   </head>
   <body>
     <div class="contenedor">
     <header class="fila">
-      <div class="col-4"><a href="../index.html"/><img src="../img/logo.jpg" alt="LOGO"/></a></div>
-      <div class="col-3">
+      <div class="col-4"><a href="../index.php"/><img src="../img/logo.png" alt="LOGO"/></a></div>
+      <div class="col-4">
         <h1> Alquilete </h1>
         <h3> Alquila tu patinete </h3>
       </div>
-      <div class="col-1"></div>
       <div class="col-3">
         <label for="usu"> Usuario </label> </br>
         <input type="text" name="usu" value=""/>
@@ -31,7 +25,7 @@
       <div class="col-1"></div>
     </header>
     <div class="fila" id="arriba">
-      <div class="col-12"><hr/></div>
+      <div class="col-12"></div>
     </div>
     <article>
       <div class="fila">
@@ -107,17 +101,17 @@
         </div>
     </article>
     <div class="fila">
-        <div class="col-12" id="abajo"><hr class="hr"/></div>
+        <div class="col-12" id="abajo"></div>
       </div>
       <footer class="fila">
         <div class="col-1"></div>
-        <div class="col-3">
+        <div class="col-4">
           <ul>
-            <li><a href="como_funciona.html">Cómo Funciona</a></li>
-            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="como_funciona.php">Cómo Funciona</a></li>
+            <li><a href="sobre_nosotros.php">Sobre Nosotros</a></li>
           </ul>
         </div>
-        <div class="col-4"></div>
+        <div class="col-3"></div>
         <div class="col-3">
           <label for="sus"> Suscríbete </label> </br>
           <input type="text" name="sus" /></br>
