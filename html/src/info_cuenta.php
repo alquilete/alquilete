@@ -1,3 +1,12 @@
+<?php
+
+if(isset($_GET["login"])){
+
+  setcookie("mi_sesion","sesion",time()+ 3600, "/dwes/html/");
+}
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -24,7 +33,7 @@
         <div class="col-4">
           <a href="info_cuenta.php"><figure>
           <img src="../img/usuario.png" alt=""></a>
-          <a href="../index.php"><figcaption>Cerrar Sesión</figcaption>
+          <a href="../index.php?logout=true"><figcaption>Cerrar Sesión</figcaption>
           </figure></a>
         </div>
       </header>

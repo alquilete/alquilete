@@ -20,7 +20,7 @@
             <label for="cont"> Contraseña </label> </br>
             <input type="text" name="cont" value=""/>
             </br>
-            <a href="info_cuenta_admin.php"><input type="submit" value="Entrar"/></a></br>
+            <a href="info_cuenta_admin.php?login=true"><input type="submit" value="Entrar"/></a></br>
           </div>
           <div class="col-3"></div>
         </header>
@@ -93,7 +93,7 @@
             </div>
             <div class="fila">
               <div class="col-2"></div>
-              <div class="col-1"><a href="info_cuenta_admin.php"><input type="submit" name="enviar" value="Enviar"></a></div>
+              <div class="col-1"><a href="info_cuenta_admin.php?login=true"><input type="submit" name="enviar" value="Enviar"></a></div>
               <div class="col-9"></div>
             </div>
         </article>

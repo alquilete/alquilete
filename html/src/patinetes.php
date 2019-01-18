@@ -2,6 +2,11 @@
 
 $loged = false;
 
+if(isset($_COOKIE["mi_sesion"])){
+
+  $loged = true;
+}
+
 ?>
 
 <html>
@@ -56,12 +61,12 @@ $loged = false;
           <input type="text" name="cont" value=""/>
           </br>
           <input type="submit" value="Entrar"/></br>
-          <p> <a href="src/registro.php">¿No estás registrado?</a></p>
+          <p> <a href="registro.php">¿No estás registrado?</a></p>
         </div>
         <div class="col-4" id="user">
           <a href="info_cuenta.php"><figure>
           <img src="../img/usuario.png" alt=""></a>
-          <a href="../index.php"><figcaption>Cerrar Sesión</figcaption>
+          <a href="../index.php?logout=true"><figcaption>Cerrar Sesión</figcaption>
           </figure></a>
         </div>
     </header>

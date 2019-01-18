@@ -1,3 +1,13 @@
+<?php
+
+
+if(!isset($_COOKIE["mi_sesion_admin"])){
+
+  header('Location: ../index_admin.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -16,7 +26,7 @@
           <div class="col-4">
             <a href="info_cuenta_admin.php"><figure>
             <img src="../img/usuario.png" alt=""></a>
-            <a href="../index_admin.php"><figcaption>Cerrar Sesión</figcaption>
+            <a href="../index_admin.php?logout=true"><figcaption>Cerrar Sesión</figcaption>
             </figure></a>
           </div>
         </header>

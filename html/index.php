@@ -2,6 +2,17 @@
 
 $loged = false;
 
+if(isset($_COOKIE["mi_sesion"])){
+
+  $loged = true;
+}
+
+if(isset($_GET["logout"])){
+
+  setcookie("mi_sesion", "sesion", time()-1000, "/dwes/html/");
+  $loged = false;
+}
+
 ?>
 
 <html>
@@ -55,7 +66,7 @@ $loged = false;
       <div class="col-4" id="user">
           <a href="src/info_cuenta.php"><figure>
           <img src="img/usuario.png" alt=""></a>
-          <a href="index.html"><figcaption>Cerrar Sesión</figcaption>
+          <a href="index.php?logout=true"><figcaption>Cerrar Sesión</figcaption>
           </figure></a>
       </div>
     </header>
@@ -74,7 +85,7 @@ $loged = false;
         <label>Patinetes</label></a></li>
         <li class="col-4"><a href="src/bicicletas.php"><img src="img/bici.png" alt=""></br>
         <label>Bicicletas</label></a></li>
-        <li class="col-4"><a href="src/bicipatinetes.php"><img src="img/bicipati.png" alt=""></br>
+        <li class="col-4"><a href="src/ambos.php"><img src="img/bicipati.png" alt=""></br>
         <label>Ambos</label></a></li>
       </ul>
     </section>

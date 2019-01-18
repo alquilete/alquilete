@@ -1,3 +1,12 @@
+<?php
+
+if(isset($_GET["logout"])){
+
+  setcookie("mi_sesion_admin", "sesion", time()-1000, "/dwes/html/");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>

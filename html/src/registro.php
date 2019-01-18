@@ -96,7 +96,7 @@
         </div>
         <div class="fila">
           <div class="col-2"></div>
-          <div class="col-2"><input type="submit" name="enviar" value="Enviar"></div>
+          <div class="col-2"><a href="info_cuenta.php?login=true"><input type="submit" name="enviar" value="Enviar"></a></div>
           <div class="col-8"></div>
         </div>
     </article>
