@@ -3,7 +3,7 @@
 /* BOOTSTRAP */
 html {
 
-  background-color: teal;
+  background-color: white;
   color: teal;
   font-family: 'Karma', serif;
 }
@@ -11,6 +11,7 @@ html {
 body {
 
   margin: 0px;
+  background-color: aquamarine;
 }
 
 .contenedor {
@@ -91,7 +92,7 @@ header div:nth-of-type(2) table {
 
 header div:nth-of-type(2) td {
 
-  background-color: turquoise;
+  background-color: teal;
 }
 
 /* hr */

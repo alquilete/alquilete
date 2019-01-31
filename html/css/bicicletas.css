@@ -44,25 +44,56 @@ header div:nth-of-type(2) table tr td img {
 
 }
 
+/* login */
 
+#login {
+  text-align: center;
+}
+
+#login label {
+
+  font-weight: bold;
+  padding: 10px 0px;
+  font-size: 1em;
+}
+
+#login a {
+
+  font-size: 0.9em;
+}
+
+#login input {
+
+  font-size: 1em;
+  margin: 5px 0;
+  width: 80%;
+}
+
+#login input:nth-of-type(3) {
+
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 40%;
+}
 
 /* user */
 
-header div:nth-of-type(3){
+#user{
 
   text-align: center;
 }
 
-header div:nth-of-type(3) figure {
+#user figure {
 
   margin: 0;
 }
 
-header div:nth-of-type(3) img {
+#user img {
 
   width: 50%;
 
 }
+
 
 hr {
 
@@ -102,15 +133,50 @@ article ul li{
 
 article img {
 
-  width: 500px;
+  width: 400px;
 }
 
-.hr {
+article button {
 
-  margin-top: 342px;
+  margin: 30px 0;
+  font-size: 1.5em;
+  padding: 10px;
+  background-color: teal;
+  color: aquamarine;
+  border-radius: 15px;
+  margin-bottom: 140px;
 }
-
 footer {
 
   font-size: 1.6em;
+}
+
+
+.popup {
+
+  display: none;
+  position: fixed;
+  top: 540px;
+  left: 90px;
+  width: 820px !important;
+  height: 820px;
+  background-color: teal;
+  border-radius: 25px;
+  color: aquamarine;
+  background-color: teal !important;
+  font-size: 2.7em;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 109px 28px rgba(0,128,128,1);
+  -moz-box-shadow: 0px 0px 109px 28px rgba(0,128,128,1);
+  box-shadow: 0px 0px 109px 28px rgba(0,128,128,1);
+}
+
+.popup input[type="checkbox"] {
+
+  height: 50px;
+}
+
+.popup div + div {
+
+  margin-top: 25px;
 }

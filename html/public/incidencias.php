@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+$loged = false;
+
+if(isset($_SESSION["valido"])){
+  header('Location: index.php');
+  die();
+}
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -10,21 +22,21 @@
     <div class="contenedor">
       <header class="fila">
         <div class="col-4">
-          <a href="../index.html"/><img src="../img/logo.png" alt="LOGO"/></a>
+          <a href="../index.php"/><img src="../img/logo.png" alt="LOGO"/></a>
         </div>
         <div class="col-4">
           <table>
             <tr>
-              <td><a href="patinetes.html"><img src="../img/patinete.png" alt="Patinetes"/></a></td>
-              <td><a href="bicicletas.html"><img src="../img/bici.png" alt="Bicicletas"/></a></td>
-              <td><a href="ambos.html"><img src="../img/bicipati.png" alt="Ambos"/></a></td>
+              <td><a href="patinetes.php"><img src="../img/patinete.png" alt="Patinetes"/></a></td>
+              <td><a href="bicicletas.php"><img src="../img/bici.png" alt="Bicicletas"/></a></td>
+              <td><a href="ambos.php"><img src="../img/bicipati.png" alt="Ambos"/></a></td>
             </tr>
           </table>
         </div>
         <div class="col-4">
-          <a href="info_cuenta.html"><figure>
-          <img src="../img/usuario.png" alt="">
-          <figcaption>Usuario Admin</figcaption>
+          <a href="info_cuenta.php"><figure>
+          <img src="../img/usuario.png" alt=""></a>
+          <a href="index.php?logout=true"><figcaption>Cerrar Sesión</figcaption>
           </figure></a>
         </div>
       </header>
@@ -73,8 +85,8 @@
         <div class="col-1"></div>
         <div class="col-4">
           <ul>
-            <li><a href="como_funciona.html">Cómo Funciona</a></li>
-            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="como_funciona.php">Cómo Funciona</a></li>
+            <li><a href="sobre_nosotros.php">Sobre Nosotros</a></li>
           </ul>
         </div>
         <div class="col-3"></div>

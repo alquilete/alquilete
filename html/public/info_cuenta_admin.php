@@ -1,6 +1,15 @@
+<?php
+
+if(isset($_GET["login"])){
+
+  setcookie("mi_sesion_admin","sesion",time()+ 3600, "/dwes/html/");
+}
+
+ ?>
+
 <html>
   <head>
-    <title>Usuarios</title>
+    <title>Info Cuenta</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/info_cuenta_admin.css">
     <link rel="stylesheet" href="../css/general_admin.css">
@@ -9,14 +18,14 @@
     <div class="contenedor">
     <header class="fila">
         <div class="col-4">
-          <a href="../index.html"/><img src="../img/logo.png" alt="LOGO"/></a>
+          <img src="../img/logo.png" alt="LOGO"/>
         </div>
         <div class="col-4"></div>
         <div class="col-4">
-          <figure>
-          <img src="../img/usuario.png" alt="">
-          <figcaption>Usuario Admin</figcaption>
-          </figure>
+          <a href="info_cuenta_admin.php"><figure>
+          <img src="../img/usuario.png" alt=""></a>
+          <a href="index_admin.php?logout=true"><figcaption>Cerrar Sesión</figcaption>
+          </figure></a>
         </div>
       </header>
       <div class="fila">
@@ -75,17 +84,17 @@
         </div>
         <div class="fila">
           <div class="col-2"></div>
-          <div class="col-3"><input type="button" name="mod" value="Registro Usuarios"></div>
+          <div class="col-3"><a href="usuarios_admin.php"><input type="button" name="mod" value="Registro Usuarios"></a></div>
           <div class="col-7"></div>
         </div>
         <div class="fila">
           <div class="col-2"></div>
-          <div class="col-3"><input type="button" name="mod" value="Registro Productos"></div>
+          <div class="col-3"><a href="productos_admin.php"><input type="button" name="mod" value="Registro Productos"></a></div>
           <div class="col-7"></div>
         </div>
         <div class="fila">
           <div class="col-2"></div>
-          <div class="col-3"><input type="button" name="mod" value="Registro Proveedores"></div>
+          <div class="col-3"><a href="proveedores_admin.php"><input type="button" name="mod" value="Registro Proveedores"></a></div>
           <div class="col-7"></div>
         </div>
         <div class="fila">
