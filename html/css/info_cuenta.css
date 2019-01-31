@@ -1,0 +1,118 @@
+
+header {
+
+  font-size: 1.6em;
+}
+
+/* logo */
+
+header div:nth-of-type(1){
+
+  text-align: center;
+}
+
+header div:nth-of-type(1) img {
+
+  width: 60%;
+
+}
+
+/* menu */
+
+header div:nth-of-type(2){
+
+  text-align: center;
+}
+
+header table, header table tr, header table tr td {
+
+  border: 1px solid grey;
+  border-collapse: separate;
+  border-spacing: 5px;
+
+}
+
+header div:nth-of-type(2) table tr td {
+
+  padding: 10px;
+
+}
+
+header div:nth-of-type(2) table tr td img {
+
+  width: 80px;
+
+}
+
+
+
+/* user */
+
+header div:nth-of-type(3){
+
+  text-align: center;
+}
+
+header div:nth-of-type(3) img {
+
+  width: 50%;
+
+}
+
+header div:nth-of-type(3) figure {
+
+  margin: 0;
+}
+
+
+
+hr {
+
+  height: 2px;
+  background-color: transparent;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+/* article */
+
+article {
+
+  font-size: 1.6em;
+}
+
+
+article h2 {
+
+  font-size: 2.7em;
+  font-weight: bold;
+
+}
+
+article h3 {
+
+  font-size: 1.8em;
+  font-weight: bold;
+
+}
+
+article ul li{
+  list-style-type: decimal;
+
+}
+
+#rep {
+
+  margin-top: 40px;
+}
+
+.hr {
+
+  margin-top: 88px;
+}
+
+footer {
+
+  font-size: 1.6em;
+}
